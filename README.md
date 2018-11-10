@@ -11,6 +11,6 @@ There are quite a few error codes which are special. They can be fount [here](ht
 
 3. Adding `${exit_status}` to your ZSH Prompt:
 
-	# i prefer to have this in my RPROMPT and colored red:
-	RPROMPT='%{$fg[red]%}${exit_status}%{$reset_color%}'
+    # i prefer to have this in my RPROMPT and colored red:
+    RPROMPT='%{$fg[red]%}${exit_status}%{$reset_color%}'
 
