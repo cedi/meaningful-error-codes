@@ -44,12 +44,12 @@ function _exit_status() {
 	if [ "$last_exit_code" -ne "0" ] ; then
 		local description=""
 		case $last_exit_code in
-			1 ) description="(Catchall for general errors)" ;;
-			2 ) description="(Misuse of shell builtins)" ;;
-			126 ) description="(Command invoked cannot execute)" ;;
-			127 ) description="(command not found)" ;;
-			128 ) description="(Invalid argument to exit)" ;;
-			130 ) description="(Script terminated by Control-C)" ;;
+			1 ) description="Catchall for general errors" ;;
+			2 ) description="Misuse of shell builtins" ;;
+			126 ) description="Command invoked cannot execute" ;;
+			127 ) description="command not found" ;;
+			128 ) description="Invalid argument to exit" ;;
+			130 ) description="Script terminated by Control-C" ;;
 
 			# Default case with no special meaning
 			*)
@@ -61,7 +61,7 @@ function _exit_status() {
 		if [ -z $description ] ; then
 			export exit_status="$last_exit_code"
 		else
-			export exit_status="$last_exit_code $description"
+			export exit_status="$last_exit_code ($description)"
 		fi
 	else
 		export exit_status=""
