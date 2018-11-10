@@ -7,10 +7,13 @@ There are quite a few error codes which are special. They can be fount [here](ht
 1. cloning this repository to `$ZSH_CUSTOM/plugins/`
 2. enabling the plugin in your zshrc
 
-    plugins=(meaningful-error-codes)
+```
+plugins=(meaningful-error-codes)
+```
 
 3. Adding `${exit_status}` to your ZSH Prompt:
 
-    # i prefer to have this in my RPROMPT and colored red:
-    RPROMPT='%{$fg[red]%}${exit_status}%{$reset_color%}'
-
+```
+# i prefer to have this in my RPROMPT and colored red:
+RPROMPT='%{$fg[red]%}${exit_status}%{$reset_color%}'
+```
