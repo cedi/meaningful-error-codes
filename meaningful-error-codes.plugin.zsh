@@ -61,7 +61,7 @@ function _exit_status() {
 		if [ -z $description ] ; then
 			export exit_status="$last_exit_code"
 		else
-			export exit_status="$last_exit_code ($description)"
+			export exit_status="($description)"
 		fi
 	else
 		export exit_status=""
